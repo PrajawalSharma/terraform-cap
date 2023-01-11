@@ -1,1 +1,3 @@
 sudo kubectl get nodes
+sudo helm create nginx
+sudo helm install nginx ./nginx/ --set service.type=LoadBalancer
