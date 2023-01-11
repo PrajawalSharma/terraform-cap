@@ -37,7 +37,7 @@ resource "azurerm_network_security_rule" "web_nsg_rule_inbound" {
   protocol                    = "Tcp"
   source_port_range           = "*"
   destination_port_range      = each.value
-  source_address_prefix       = "223.236.74.85"
+  source_address_prefix       = "4.246.213.176"
   destination_address_prefix  = "*"
   resource_group_name         = azurerm_resource_group.example.name
   network_security_group_name = azurerm_network_security_group.web_subnet_nsg.name
