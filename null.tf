@@ -4,7 +4,7 @@ resource "null_resource" "null_copy_ssh" {
     type = "ssh"
     host = azurerm_linux_virtual_machine.example.public_ip_address
     user = "adminuser"
-    private_key = file("~/.ssh/id_rsa")
+    private_key = file("/root/.ssh/id_rsa")
   }
 
   provisioner "remote-exec" {
