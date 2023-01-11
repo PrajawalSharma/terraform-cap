@@ -1,5 +1,9 @@
 resource "null_resource" "null_copy_ssh" {
     
+    depends_on = [
+    azurerm_linux_virtual_machine.example
+  ]
+    
   connection {
     type = "ssh"
     host = azurerm_linux_virtual_machine.example.public_ip_address
