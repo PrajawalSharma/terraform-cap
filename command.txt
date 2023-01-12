@@ -2,9 +2,4 @@ sudo -i
 kubectl get nodes
 helm create nginx
 helm install nginx ./nginx/ --set service.type=LoadBalancer
-wget https://github.com/istio/istio/releases/download/1.7.2/istio-1.7.2-linux-amd64.tar.gz
-tar -zxvf istio-1.7.2-linux-amd64.tar.gz
-cd istio-1.7.2
-export PATH=$PWD/bin:$PATH
-istioctl install --set profile=demo
-kubectl -n istio-system get deploy
+kubectl label namespace default istio-injection=enabled
