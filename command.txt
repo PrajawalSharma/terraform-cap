@@ -3,5 +3,5 @@ sudo helm create nginx
 sudo helm install nginx ./nginx/ --set service.type=LoadBalancer
 sudo wget https://github.com/istio/istio/releases/download/1.7.2/istio-1.7.2-linux-amd64.tar.gz
 sudo  tar -zxvf istio-1.7.2-linux-amd64.tar.gz
-sudo cd istio-1.7.2
-sudo export PATH=$PWD/bin:$PATH
+cd istio-1.7.2
+export PATH=$PWD/bin:$PATH
