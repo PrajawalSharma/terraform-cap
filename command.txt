@@ -1,5 +1,5 @@
 sudo -i
 kubectl get nodes
+kubectl label namespace default istio-injection=enabled
 helm create nginx
 helm install nginx ./nginx/ --set service.type=LoadBalancer
-kubectl label namespace default istio-injection=enabled
