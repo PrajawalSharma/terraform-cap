@@ -34,11 +34,10 @@ resource "null_resource" "null_copy_ssh" {
         "chmod 700 get_helm.sh",
         "./get_helm.sh",
         "sudo kubectl get nodes",
-        "sudo -i",
         "curl -L https://istio.io/downloadIstio | sh -",
-        "cd istio-1.16.1",
-        "export PATH=$PWD/bin:$PATH",
-        "istioctl install --set profile=demo -y"
+        "cd istio-1.16.1/bin",
+        "sudo cp istioctl /usr/bin/",
+        "sudo istioctl install --set profile=demo -y"
     ]
   }
 }
